@@ -1,9 +1,9 @@
 import { ethers } from "hardhat";
 import { expect } from "chai";
 
-describe("SushiToken", function () {
+describe("PhoenixToken", function () {
   before(async function () {
-    this.SushiToken = await ethers.getContractFactory("SushiToken")
+    this.SushiToken = await ethers.getContractFactory("PhoenixToken")
     this.signers = await ethers.getSigners()
     this.alice = this.signers[0]
     this.bob = this.signers[1]
@@ -19,8 +19,8 @@ describe("SushiToken", function () {
     const name = await this.sushi.name()
     const symbol = await this.sushi.symbol()
     const decimals = await this.sushi.decimals()
-    expect(name, "SushiToken")
-    expect(symbol, "SUSHI")
+    expect(name, "PhoenixToken")
+    expect(symbol, "PHX")
     expect(decimals, "18")
   })
 

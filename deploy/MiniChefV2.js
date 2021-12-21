@@ -10,11 +10,11 @@ module.exports = async function ({ ethers, deployments, getNamedAccounts }) {
   let sushiAddress;
 
   if (chainId === "31337") {
-    sushiAddress = (await deployments.get("SushiToken")).address;
+    sushiAddress = (await deployments.get("PhoenixToken")).address;
   } else if (chainId in SUSHI_ADDRESS) {
     sushiAddress = SUSHI_ADDRESS[chainId];
   } else {
-    throw Error("No SUSHI!");
+    throw Error("No PHX!");
   }
 
   await deploy("MiniChefV2", {

@@ -31,7 +31,7 @@ module.exports = async function (
 
   const nonce = await token.connect(dev).nonces(dev.address)
 
-  const sushiRoll = await ethers.getContract("SushiRoll")
+  const sushiRoll = await ethers.getContract("Migration")
 
   const chainId = await getChainId()
 

@@ -17,7 +17,7 @@ analyze:
         - contracts/uniswapv2/UniswapV2Router02.sol:UniswapV2Router02
         - contracts/SushiRoll.sol:SushiRoll
         - contracts/SushiToken.sol:SushiToken
-        - contracts/SushiBar.sol:SushiBar
-        - contracts/MasterChef.sol:MasterChef
+        - contracts/Nest.sol:Nest
+        - contracts/EggLayer.sol:EggLayer
         - contracts/governance/Timelock.sol:Timelock
         - contracts/Migrator.sol:Migrator

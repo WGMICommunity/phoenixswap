@@ -1,10 +1,10 @@
 import { ethers } from "hardhat";
 import { expect } from "chai";
 
-describe("SushiBar", function () {
+describe("Nest", function () {
   before(async function () {
-    this.SushiToken = await ethers.getContractFactory("SushiToken")
-    this.SushiBar = await ethers.getContractFactory("SushiBar")
+    this.SushiToken = await ethers.getContractFactory("PhoenixToken")
+    this.SushiBar = await ethers.getContractFactory("Nest")
 
     this.signers = await ethers.getSigners()
     this.alice = this.signers[0]

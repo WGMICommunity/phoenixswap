@@ -12,8 +12,8 @@ describe("Migrator", function () {
     this.UniswapV2Factory = await ethers.getContractFactory("UniswapV2Factory")
     this.UniswapV2Pair = await ethers.getContractFactory("UniswapV2Pair")
     this.ERC20Mock = await ethers.getContractFactory("ERC20Mock", this.minter)
-    this.SushiToken = await ethers.getContractFactory("SushiToken")
-    this.MasterChef = await ethers.getContractFactory("MasterChef")
+    this.SushiToken = await ethers.getContractFactory("PhoenixToken")
+    this.MasterChef = await ethers.getContractFactory("EggLayer")
     this.Migrator = await ethers.getContractFactory("Migrator")
   })
 

@@ -46,11 +46,11 @@ const config: HardhatUserConfig = {
   },
   namedAccounts: {
     deployer: {
-      default: 0,
+      default: 5,
     },
     dev: {
       // Default to 1
-      default: 1,
+      default: 5,
       // dev address mainnet
       // 1: "",
     },

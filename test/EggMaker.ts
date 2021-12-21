@@ -1,14 +1,14 @@
 import { expect } from "chai";
 import { prepare, deploy, getBigNumber, createSLP } from "./utilities"
 
-describe("SushiMaker", function () {
+describe("EggMaker", function () {
   before(async function () {
-    await prepare(this, ["SushiMaker", "SushiBar", "SushiMakerExploitMock", "ERC20Mock", "UniswapV2Factory", "UniswapV2Pair"])
+    await prepare(this, ["EggMaker", "Nest", "SushiMakerExploitMock", "ERC20Mock", "UniswapV2Factory", "UniswapV2Pair"])
   })
 
   beforeEach(async function () {
     await deploy(this, [
-      ["sushi", this.ERC20Mock, ["SUSHI", "SUSHI", getBigNumber("10000000")]],
+      ["sushi", this.ERC20Mock, ["PHX", "PHX", getBigNumber("10000000")]],
       ["dai", this.ERC20Mock, ["DAI", "DAI", getBigNumber("10000000")]],
       ["mic", this.ERC20Mock, ["MIC", "MIC", getBigNumber("10000000")]],
       ["usdc", this.ERC20Mock, ["USDC", "USDC", getBigNumber("10000000")]],
@@ -30,11 +30,11 @@ describe("SushiMaker", function () {
   })
   describe("setBridge", function () {
     it("does not allow to set bridge for Sushi", async function () {
-      await expect(this.sushiMaker.setBridge(this.sushi.address, this.weth.address)).to.be.revertedWith("SushiMaker: Invalid bridge")
+      await expect(this.sushiMaker.setBridge(this.sushi.address, this.weth.address)).to.be.revertedWith("EggMaker: Invalid bridge")
     })
 
     it("does not allow to set bridge for WETH", async function () {
-      await expect(this.sushiMaker.setBridge(this.weth.address, this.sushi.address)).to.be.revertedWith("SushiMaker: Invalid bridge")
+      await expect(this.sushiMaker.setBridge(this.weth.address, this.sushi.address)).to.be.revertedWith("EggMaker: Invalid bridge")
     })
 
     it("does not allow to set bridge to itself", async function () {

@@ -3,7 +3,7 @@ import { ethers } from "hardhat";
 import { expect } from "chai";
 import { advanceBlockTo } from "./utilities"
 
-describe("MasterChef", function () {
+describe("EggLayer", function () {
   before(async function () {
     this.signers = await ethers.getSigners()
     this.alice = this.signers[0]
@@ -12,8 +12,8 @@ describe("MasterChef", function () {
     this.dev = this.signers[3]
     this.minter = this.signers[4]
 
-    this.MasterChef = await ethers.getContractFactory("MasterChef")
-    this.SushiToken = await ethers.getContractFactory("SushiToken")
+    this.MasterChef = await ethers.getContractFactory("EggLayer")
+    this.SushiToken = await ethers.getContractFactory("PhoenixToken")
     this.ERC20Mock = await ethers.getContractFactory("ERC20Mock", this.minter)
   })
 
