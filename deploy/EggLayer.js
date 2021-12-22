@@ -11,14 +11,14 @@ module.exports = async function ({ ethers, deployments, getNamedAccounts }) {
     log: true,
     deterministicDeployment: false
   })
-
+/*
   if (await sushi.owner() !== address) {
     // Transfer Phoenix Ownership to Layer
     console.log("Transfer Phoenix Ownership to Layer")
     await (await sushi.transferOwnership(address)).wait()
   }
 
-  /*const masterChef = await ethers.getContract("EggLayer")
+  const masterChef = await ethers.getContract("EggLayer")
   if (await masterChef.owner() !== dev) {
     // Transfer ownership of EggLayer to dev
     console.log("Transfer ownership of EggLayer to dev")
